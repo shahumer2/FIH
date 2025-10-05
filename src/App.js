@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import SalesMarketingPage from './pages/SalesMarketing';
+import CrowdAndTraffic from './pages/Sales/CrowdAndTraffic';
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-
-
+        <Route path="/salesmarketing" element={<SalesMarketingPage />} />
+        <Route path="/services/security-crowd-traffic-management" element={<CrowdAndTraffic />} />
       </Routes>
     </div>
   );

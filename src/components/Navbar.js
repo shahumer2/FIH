@@ -20,15 +20,9 @@ function Navbar() {
   const navItems = [
     { path: '/', label: 'Home' },
     { 
-      path: '/sales-marketing', 
+      path: '/salesmarketing', 
       label: 'Sales & Marketing',
-      dropdown: [
-        { path: '/sales-marketing/advancer-ifm', label: 'ADVANCER IFM' },
-        { path: '/sales-marketing/security-crowd', label: 'Security Crowd & Traffic' },
-        { path: '/sales-marketing/ashtree-international', label: 'Ashtree International' },
-        { path: '/sales-marketing/social-media', label: 'Social Media Campaigns' },
-        { path: '/sales-marketing/case-study', label: 'Case Study: Medical Security' }
-      ]
+
     },
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
@@ -125,14 +119,14 @@ function Navbar() {
             {/* Emergency Contact - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
               <a 
-                href="tel:+6597417333"
+                href="tel:+6587694665"
                 className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   isScrolled 
                     ? 'bg-blue-600 text-white hover:bg-blue-700' 
                     : 'bg-white text-blue-600 hover:bg-blue-50'
                 }`}
               >
-                Call: (65) 9741 7333
+                Call: (65) 87694665
               </a>
             </div>
 
