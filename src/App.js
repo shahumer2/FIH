@@ -10,6 +10,10 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import SalesMarketingPage from './pages/SalesMarketing';
 import CrowdAndTraffic from './pages/Sales/CrowdAndTraffic';
+import AviationSpecialist from './pages/Sales/AviationSpecialist';
+import CriticalInfrastructure from './pages/Sales/CriticalInfrastructure';
+import EducationAndSchools from './pages/Sales/EducationAndSchools';
+import SpecialistTraining from './pages/Sales/SpecialistTraining';
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/salesmarketing" element={<SalesMarketingPage />} />
         <Route path="/services/security-crowd-traffic-management" element={<CrowdAndTraffic />} />
+        <Route path="/services/aviation-specialist" element={<AviationSpecialist />} />
+        <Route path="/services/critical-infrastructure-protection" element={<CriticalInfrastructure />} />
+        <Route path="/services/educational-institutions" element={<EducationAndSchools />} />
+ <Route path="/services/specialist-training" element={<SpecialistTraining />} />
       </Routes>
     </div>
   );

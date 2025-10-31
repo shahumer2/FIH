@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { Search, Shield, Users, FileText, Mail, Phone, MapPin, ArrowRight, Download } from 'lucide-react';
+import Footer from './Footer';
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -66,9 +67,10 @@ function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 flex items-center justify-center bg-gradient-to-r from-blue-900/80 to-gray-900/80">
   <div 
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+    className="absolute inset-0  bg-center bg-no-repeat z-0"
     style={{
-      backgroundImage: 'url("/img/cleaning.jpg")'
+      backgroundImage: 'url("/img/background.jpg")',
+      transform: 'scale(1)'
     }}
   />
   <div className="absolute inset-0 bg-black/40 z-0" />
@@ -99,7 +101,7 @@ function Home() {
         className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center"
       >
         <Phone className="w-5 h-5 mr-2" />
-        Call: (65) 6926 0792
+        Call: (65) 9740-7333
       </a>
     </div>
   </div>
@@ -339,10 +341,17 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section style={{
+  background: 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)',
+  padding: '1rem 0',
+  color: 'white',
+  boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.5), 0 -2px 10px rgba(165, 97, 97, 0.3)',
+  borderTop: '3px solid #a36161',
+  position: 'relative'
+}}>
+    <Footer/>
+        {/* <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact FIH today for professional integrated facility management and healthcare services.
@@ -356,16 +365,11 @@ function Home() {
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
             </Link>
-            <a 
-              href="/pdfs/fih-strategy.pdf"
-              download
-              className="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download Strategy PDF
-            </a>
+        
           </div>
-        </div>
+        </div> */}
+
+    
       </section>
     </div>
   );
