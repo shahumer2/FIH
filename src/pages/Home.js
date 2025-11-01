@@ -114,7 +114,7 @@ function Home() {
 </section>
 
       {/* Next Six Months Strategy */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Next Six Months Strategy</h2>
@@ -140,35 +140,14 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SEO Focus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Search Engine Optimize <span className="text-blue-600">www.fih.com.sg</span>
-              </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Enhancing our online presence through comprehensive SEO strategies to reach more customers 
-                and showcase our professional cleaning and facility management services.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Improved search engine rankings</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Increased website traffic and visibility</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Better customer engagement and conversion</span>
-                </div>
-              </div>
+       <img src='/img/background.jpg'/>
             </div>
             
             <div className="bg-white rounded-2xl shadow-lg p-8">
