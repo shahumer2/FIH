@@ -26,7 +26,7 @@ function Navbar() {
     },
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
-    { path: '/dashboard', label: 'Dashboard' },
+
     { path: '/contact', label: 'Contact' }
   ];
 

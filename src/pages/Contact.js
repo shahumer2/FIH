@@ -1,54 +1,41 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 function Contact() {
   return (
-  
-   <div className="min-h-screen relative">
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Navbar />
+      <section className="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+               Get in touch with our team for professional security and traffic management solutions
+            </p>
+          </div>
+        </div>
+      </section>
       {/* Background Image with Opacity from Public Folder */}
-      <div 
-        className="absolute inset-0 bg-cover bg-cover bg-no-repeat z-0 opacity-60 mb-[-200px]"
+      
+
+      {/* Content */}
+      <div className="relative z-1000">
+        
+<div
+       className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-60"
         style={{
           backgroundImage: `url("${process.env.PUBLIC_URL}/img/background.jpg")`
         }}
       ></div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        <nav className="bg-gray-900 text-white shadow-lg relative">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center space-x-8">
-                     <img 
-                src="/img/logo.png" 
-                alt="FIH Logo" 
-                className={`h-10 w-auto transition-all duration-300 
-                }`}
-              />
-                <a href="/" className="text-xl font-bold text-white">FIH</a>
-                <div className="hidden md:flex space-x-6">
-                  <a href="/" className="hover:text-blue-300">Home</a>
-                  <a href="/about" className="hover:text-blue-300">About Us</a>
-                  <a href="/services" className="hover:text-blue-300">Services</a>
-                  <a href="/contact" className="text-blue-300">Contact</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         <div className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
-              Get in touch with our team for professional security and traffic management solutions
-            </p>
-          </div>
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-              
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <Phone className="w-6 h-6 text-blue-600 mr-4 mt-1" />

@@ -107,11 +107,11 @@ function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+   <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Navbar />
 
       {/* Header Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-gray-900 text-white">
+      <section className="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
