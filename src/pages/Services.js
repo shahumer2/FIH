@@ -9,7 +9,7 @@ function Services() {
       icon: <Shield className="w-8 h-8" />,
       title: "Security & Technology",
       description: "Comprehensive security solutions integrated with advanced technology for complete protection",
-      image: "/images/security-technology.jpg",
+      image: "/img/security/sec.png",
       color: "blue",
       features: [
         "Event & Crowd Management",
@@ -26,7 +26,7 @@ function Services() {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Cleaning Services",
       description: "Professional cleaning solutions for commercial, healthcare, and specialized facilities",
-      image: "/images/cleaning-services.jpg",
+      image: "/img/cleaning.jpg",
       color: "green",
       features: [
         "Commercial & Healthcare Facilities Cleaning",
@@ -40,7 +40,7 @@ function Services() {
       icon: <Bug className="w-8 h-8" />,
       title: "Pest Control & Fumigation",
       description: "Complete pest management and fumigation services for all types of facilities",
-      image: "/images/pest-control.jpg",
+      image: "/img/pest.jpeg",
       color: "orange",
       features: [
         "General Pest Control Services",
@@ -56,7 +56,7 @@ function Services() {
       icon: <Trees className="w-8 h-8" />,
       title: "Landscaping & Gardening",
       description: "Professional landscaping and gardening services to enhance your outdoor spaces",
-      image: "/images/landscaping.jpg",
+      image: "/img/garden.jpeg",
       color: "emerald",
       features: [
         "Landscape Planting & Maintenance",
@@ -109,7 +109,7 @@ function Services() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      
+
       {/* Header Section */}
       <section className="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -130,7 +130,7 @@ function Services() {
             backgroundSize: '100px 100px'
           }}></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
@@ -142,15 +142,15 @@ function Services() {
               </h2>
             </div>
             <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              We combine strategic expertise with cutting-edge technology to create comprehensive solutions that 
-              transform your operational landscape. Our holistic methodology ensures seamless integration across 
+              We combine strategic expertise with cutting-edge technology to create comprehensive solutions that
+              transform your operational landscape. Our holistic methodology ensures seamless integration across
               all service domains.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {approachFeatures.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="group text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105"
               >
@@ -165,8 +165,8 @@ function Services() {
 
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
             <p className="text-lg text-center text-blue-50 leading-relaxed">
-              With an unwavering commitment to excellence and a focus on long-term value creation, 
-              we empower our clients to operate with absolute confidence—knowing their environments 
+              With an unwavering commitment to excellence and a focus on long-term value creation,
+              we empower our clients to operate with absolute confidence—knowing their environments
               are secure, optimized, and prepared for the future.
             </p>
           </div>
@@ -178,19 +178,29 @@ function Services() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Link 
+              <Link
                 key={index}
                 to={service.url}
                 className="group block"
               >
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col">
+                `<div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col">
                   {/* Image Section */}
                   <div className="relative h-48 overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                      <div className={`w-20 h-20 rounded-2xl ${iconBgClasses[service.color]} flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}>
-                        {service.icon}
-                      </div>
+                    {/* Background Image */}
+                    <div
+                      className="w-full h-full bg-cover bg-center flex items-center justify-center"
+                      style={{ backgroundImage: `url(${service.image})` }}
+                    >
+                      {/* Overlay for better text readability */}
+                      <div className="absolute inset-0 bg-black/30"></div>
+
+                      {/* Icon Container */}
+                    <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 relative z-10">
+  {service.icon}
+</div>
                     </div>
+
+                    {/* Service Badge */}
                     <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold bg-gradient-to-r ${colorClasses[service.color]}`}>
                       Service
                     </div>
@@ -204,7 +214,7 @@ function Services() {
                     <p className="text-gray-600 mb-4 flex-1">
                       {service.description}
                     </p>
-                    
+
                     {/* Features List */}
                     <div className="space-y-2 mb-4">
                       {service.features.map((feature, featureIndex) => (
@@ -213,14 +223,6 @@ function Services() {
                           <span className="text-sm text-gray-700">{feature}</span>
                         </div>
                       ))}
-                      {/* {service.features.length > 3 && (
-                        <div className="flex items-start">
-                          <div className={`w-2 h-2 rounded-full mt-2 mr-3 ${iconBgClasses[service.color].split(' ')[0]}`}></div>
-                          <span className="text-sm text-gray-700">
-                            +{service.features.length - 3} more services
-                          </span>
-                        </div>
-                      )} */}
                     </div>
 
                     {/* CTA Button */}
@@ -230,7 +232,7 @@ function Services() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>`
               </Link>
             ))}
           </div>
@@ -279,8 +281,8 @@ function Services() {
           <p className="text-xl text-gray-300 mb-8">
             Contact us to discuss your security, cleaning, pest control, and landscaping requirements
           </p>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block"
           >
             Get in Touch
