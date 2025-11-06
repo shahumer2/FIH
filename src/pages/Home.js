@@ -374,14 +374,15 @@ function Home() {
                     title: "Pest Control & Fumigation",
                     description:
                       "Comprehensive pest management and fumigation for long-term prevention and safety compliance.",
-                    image: "/images/pest-control.jpg",
+                    image: "/img/pest.jpeg",
                     link: "/services/pest-control"
                   },
+                  
                   {
                     title: "Landscaping & Gardening",
                     description:
                       "Sustainable landscaping and garden maintenance services to enhance your property's green appeal.",
-                    image: "/images/landscaping.jpg",
+                    image: "/img/garden.jpeg",
                     link: "/services/landscaping"
                   }
                 ].map((service, index) => (
