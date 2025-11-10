@@ -28,7 +28,7 @@ function Contact() {
     setSubmitStatus('');
 
     try {
-      // Replace with your EmailJS credentials
+   
       const templateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
         from_email: formData.email,
