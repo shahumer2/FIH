@@ -19,11 +19,11 @@ function Navbar() {
 
   const navItems = [
     { path: '/', label: 'Home' },
-    { 
-      path: '/salesmarketing', 
-      label: 'Sales & Marketing',
+    // { 
+    //   path: '/salesmarketing', 
+    //   label: 'Sales & Marketing',
 
-    },
+    // },
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
 
