@@ -71,7 +71,8 @@ function Contact() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Get in touch with our team for professional security and traffic management solutions
+              Get in touch with our team for professional Integrated Facilities Management solutions
+
             </p>
           </div>
         </div>
@@ -80,7 +81,7 @@ function Contact() {
       <div className="relative z-10">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-60"
           style={{
-            backgroundImage: `url("${process.env.PUBLIC_URL}/img/background.jpg")`
+           backgroundColor: 'rgba(255, 255, 255, 0.5)',
           }}
         ></div>
         
@@ -105,7 +106,7 @@ function Contact() {
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <div className="text-gray-700 space-y-1 mt-1">
                       <div>info@fih.com.sg</div>
-                      <div>www.fih.com.sg</div>
+                   
                       <div>security@fih.com.sg</div>
                     </div>
                   </div>
@@ -115,7 +116,7 @@ function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-700 mt-1">
-                      9 Euros Ave 8A<br />
+                      9 Eunos Ave 8A<br />
                       #02-00 Singapore 409461
                     </p>
                   </div>
@@ -200,10 +201,16 @@ function Contact() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white/90"
                   >
                     <option value="">Select a service</option>
-                    <option value="Crowd Management">Crowd Management</option>
-                    <option value="Traffic Management">Traffic Management</option>
-                    <option value="Security Escort">Security Escort</option>
-                    <option value="Emergency Response">Emergency Response</option>
+                    <option value="Cleaning">Cleaning </option>
+                    <option value="Landscaping">Landscaping</option>
+                    <option value="Pest Control">Pest Control
+</option>
+                    <option value="Traffic & Crowd Management">Traffic & Crowd Management
+</option>
+         <option value="Outrider & Escort">Outrider & Escort
+
+</option>
+       
                     <option value="Other">Other</option>
                   </select>
                 </div>

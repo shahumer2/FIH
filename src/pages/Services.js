@@ -240,7 +240,7 @@ function Services() {
       </section>
 
       {/* Additional Info Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Strategic Resource Partners</h2>
@@ -272,7 +272,7 @@ function Services() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">

@@ -1,6 +1,7 @@
-import { Bug, Shield, Sparkles, Star, Trees, Users } from 'lucide-react';
+import { Bug, Shield, Sparkles, Star, Trees, Users, Users2 } from 'lucide-react';
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
@@ -52,7 +53,7 @@ function About() {
               trust, accountability, and measurable results</p>
           </div>
           <div className="bg-gray-200 h-100 rounded-lg flex items-center justify-center">
-            <img src="/img/fihleft.png" alt="About Us" className="w-full h-100 object-cover rounded-lg" />
+            <img src="/img/about.png" alt="About Us" className="w-full h-full object-center rounded-lg" />
           </div>
         </div>
 
@@ -61,24 +62,24 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6 text-blue-600" />
+                <Users2 className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Commitment to Safety</h4>
-              <p className="text-gray-600 text-sm">Zero incidents, maximum protection</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Trained & Experienced </h4>
+              <p className="text-gray-600 text-sm">Skilled professionals, proven results</p>
             </div>
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-blue-600" />
+                <Shield className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">One Team</h4>
-              <p className="text-gray-600 text-sm">Collaborative approach, unified goals</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Integrity</h4>
+              <p className="text-gray-600 text-sm">Transparent practices, ethical standards</p>
             </div>
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Trusted Partner</h4>
-              <p className="text-gray-600 text-sm">Reliability and integrity guaranteed</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Ease of Mind </h4>
+              <p className="text-gray-600 text-sm">Stress-free service, consistent excellence</p>
             </div>
           </div>
         </div>
@@ -201,9 +202,11 @@ function About() {
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Partner with us to experience comprehensive facility management solutions that drive efficiency, safety, and excellence.
                 </p>
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link to={"/contact"}>
+                <button  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Started Today
                 </button>
+              </Link>
               </div>
             </div>
           </div>

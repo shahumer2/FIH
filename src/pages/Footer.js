@@ -40,7 +40,7 @@ const Footer = () => {
             <span className="contact-detail"><span class="log"><FaPhoneAlt /></span>+65 9741-7333  <br/>+65 9742-7333</span>
 
             <span className="contact-email"><span class="log"><CiGlobe /></span>security@fih.com.sg</span>
-            <span className="contact-email"> <span class="log"><CiGlobe /> </span>  9 Euros Ave 8A <br/>
+            <span className="contact-email"> <span class="log"><CiGlobe /> </span>  9 Eunos Ave 8A <br/>
         #02-00 <br/>
           Singapore 409461</span>
           </div>

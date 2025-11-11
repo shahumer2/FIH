@@ -119,7 +119,7 @@ function Navbar() {
             {/* Emergency Contact - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
               <a 
-                href="tel:+659740-7333"
+                href="tel:+6597407333"
                 className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   isScrolled 
                     ? 'bg-blue-600 text-white hover:bg-blue-700' 
