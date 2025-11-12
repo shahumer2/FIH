@@ -66,7 +66,7 @@ function Contact() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Navbar />
       
-      <section className="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#702727"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>

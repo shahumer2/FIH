@@ -1,17 +1,19 @@
-import { Bug, Shield, Sparkles, Star, Trees, Users, Users2 } from 'lucide-react';
+import { Bug, Heart, Shield, Sparkles, Star, Trees, Users, Users2 } from 'lucide-react';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
-
+import { FcDataProtection } from 'react-icons/fc';
+import { PiUniteDuotone } from 'react-icons/pi';
+import Footer from "./Footer";
 function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" >
       <Navbar />
-      <section className="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#702727"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About FIH</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3 ">About FIH</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mt-8 mx-auto">
               Focus Integrated Healthcare (FIH)
             </p>
           </div>
@@ -80,6 +82,30 @@ function About() {
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Ease of Mind </h4>
               <p className="text-gray-600 text-sm">Stress-free service, consistent excellence</p>
+            </div>
+
+
+
+               <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FcDataProtection className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Committed to Safety </h4>
+              <p className="text-gray-600 text-sm">Zero Incidents, maximum protection</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <PiUniteDuotone className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">One Team</h4>
+              <p className="text-gray-600 text-sm">Unified effort, seamless delivery</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Trusted Partner </h4>
+              <p className="text-gray-600 text-sm">Reliable support, long-term relationships</p>
             </div>
           </div>
         </div>
@@ -197,7 +223,7 @@ function About() {
 
             {/* Bottom CTA */}
             <div className="text-center mt-12">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="  rounded-2xl p-8 text-white" style={{backgroundColor:"#702727"}}>
                 <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Facilities?</h3>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Partner with us to experience comprehensive facility management solutions that drive efficiency, safety, and excellence.
@@ -212,6 +238,7 @@ function About() {
           </div>
         </div>
       </div>
+            <Footer/>
     </div>
   );
 }

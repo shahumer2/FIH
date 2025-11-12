@@ -524,7 +524,7 @@ function Home() {
           </div>
 
           {/* Stats Section Below */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-200">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-200">
             <div className="bg-green-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
               <Users className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Work Pass Quota Solutions</h3>
@@ -548,7 +548,7 @@ function Home() {
                 Quick mobilization alternatives for short-term staffing needs and emergency situations
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

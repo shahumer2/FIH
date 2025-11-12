@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { Shield, Users, Car, Building, School, TrafficCone, FileText, Target, TrendingUp, Zap, ShieldCheck, Sparkles, Bug, Trees } from 'lucide-react';
+import Footer from './Footer';
 
 function Services() {
   const services = [
@@ -26,7 +27,7 @@ function Services() {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Cleaning Services",
       description: "Professional cleaning solutions for commercial, healthcare, and specialized facilities",
-      image: "/img/cleaning.jpg",
+      image: "/img/cleaning/cleaning2.jpg",
       color: "green",
       features: [
         "Commercial & Healthcare Facilities Cleaning",
@@ -40,7 +41,7 @@ function Services() {
       icon: <Bug className="w-8 h-8" />,
       title: "Pest Control & Fumigation",
       description: "Complete pest management and fumigation services for all types of facilities",
-      image: "/img/pest.jpeg",
+      image: "/img/pest/pest.png",
       color: "orange",
       features: [
         "General Pest Control Services",
@@ -56,7 +57,7 @@ function Services() {
       icon: <Trees className="w-8 h-8" />,
       title: "Landscaping & Gardening",
       description: "Professional landscaping and gardening services to enhance your outdoor spaces",
-      image: "/img/garden.jpeg",
+      image: "/img/garden/garden2.jpg",
       color: "emerald",
       features: [
         "Landscape Planting & Maintenance",
@@ -111,7 +112,7 @@ function Services() {
       <Navbar />
 
       {/* Header Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#702727"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
@@ -289,6 +290,7 @@ function Services() {
           </Link>
         </div>
       </section>
+        <Footer/>
     </div>
   );
 }

@@ -175,7 +175,7 @@ const CrowdAndTraffic = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-gray-900 text-white">
+      <section className="pt-32 pb-20  text-white" style={{backgroundColor:"#702727"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1094,7 +1094,7 @@ const CrowdAndTraffic = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+      <section className="py-20  items-center mx-auto"   >
 
         <div className="footer-logo-container">
           <img
@@ -1109,16 +1109,8 @@ const CrowdAndTraffic = () => {
 
 
 
-        <div className="contact-info">
-          <div className="contact-item">
-            <span className="contact-label">Traffic & Security</span>
-            <span className="contact-detail text-white mb-6" style={{ color: 'white' }}><span class="log "><FaPhoneAlt /></span>+65 9741-7333  <br />+65 9742-7333</span>
-
-            <span className="contact-email text-white mb-3" style={{ color: 'white' }}><span class="log "><CiGlobe /></span>security@fih.com.sg</span>
-            <span className="contact-email text-white" style={{ color: 'white' }}> <span class="log "><CiGlobe /> </span>  9 Eunos Ave 8A,<br />
-              #02-00 <br />
-              Singapore 409461</span>
-          </div>
+        <div className="contact-info flex justify-center  mx-auto mt-8 flex-wrap">
+          
 
           <div className="contact-item">
             <img
@@ -1127,6 +1119,16 @@ const CrowdAndTraffic = () => {
               className={`h-40 w-auto transition-all duration-300 
                 }`}
             />
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-label">Traffic & Security</span>
+            <span className="contact-detail text-white mb-6" ><span class="log "><FaPhoneAlt /></span>+65 9741-7333  <br />+65 9742-7333</span>
+
+            <span className="contact-email text-white mb-3" ><span class="log "><CiGlobe /></span>security@fih.com.sg</span>
+            <span className="contact-email text-white" > <span class="log "><CiGlobe /> </span>  9 Eunos Ave 8A,<br />
+              #02-00 <br />
+              Singapore 409461</span>
           </div>
         </div>
 
