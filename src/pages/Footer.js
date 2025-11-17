@@ -33,7 +33,7 @@ const Footer = () => {
                 <span className="log text-blue-400 text-xs"><FaPhoneAlt /></span>
                 <span>+65 9740-7333</span>
               </div>
-              <div className="contact-email flex items-center justify-center lg:justify-start gap-2 text-gray-300">
+              <div className="contact-website flex items-center justify-center lg:justify-start gap-2 text-gray-300">
                 <span className="log text-blue-400 text-xs"><FaRegMessage /></span>
                 <span>info@fih.com.sg</span>
               </div>
@@ -67,9 +67,9 @@ const Footer = () => {
                   <span>+65 9742-7333</span>
                 </div>
               </div>
-              <div className="contact-email flex items-center justify-center lg:justify-start gap-2 text-gray-300">
+              <div className="contact-email  flex items-center justify-center lg:justify-start gap-2 text-gray-300">
                 <span className="log text-blue-400 text-xs"><CiGlobe /></span>
-                <span>security@fih.com.sg</span>
+                <span className=''>security@fih.com.sg</span>
               </div>
               <div className="contact-email flex items-center justify-center lg:justify-start gap-2 text-gray-300">
                 <span className="log text-blue-400 text-xs"><CiGlobe /></span>

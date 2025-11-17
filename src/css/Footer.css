@@ -199,8 +199,16 @@
   .contact-email,
   .contact-website {
     justify-content: center;
+       
     text-align: center;
+    
+    
   }
+
+    .contact-email{
+ margin-left: 30px;
+    }
+
   
   .qr-container {
     margin: 10px 0;
