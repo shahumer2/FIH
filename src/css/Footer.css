@@ -51,7 +51,7 @@
 .footer-logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .footer-logo {
@@ -63,9 +63,9 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 200px; /* Reduced from 500px to 80px */
+  gap: 150px; /* Reduced from 500px to 80px */
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 0px 0;
   width: 100%;
 }
 
@@ -160,12 +160,27 @@
   .contact-info {
     gap: 40px; /* Even smaller gap for tablets */
   }
+    .footer-top {
+    background-size: cover;
+    background-position: center top;
+    min-height: 450px;
+  }
+
 }
 
 @media (max-width: 768px) {
   .fih-footer {
     padding: 30px 15px 30px 15px; /* Reduced padding for mobile */
   }
+
+    .footer-top {
+    background-size: cover;
+    background-position: center top;
+    min-height: 400px;
+    padding: 30px 15px;
+  }
+
+
   
   .contact-info {
     gap: 30px;
@@ -237,6 +252,12 @@
   .fih-footer {
     padding: 20px 10px 20px 10px; /* Minimal padding for small mobile */
   }
+   .footer-top {
+    background-size: cover;
+    background-position: center top;
+    min-height: 350px;
+    padding: 20px 10px;
+  }
   
   .contact-info {
     gap: 20px; /* Minimal gap for small screens */
@@ -283,6 +304,12 @@
 @media (max-width: 360px) {
   .fih-footer {
     padding: 15px 8px 15px 8px;
+  }
+    .footer-top {
+    background-size: cover;
+    background-position: center top;
+    min-height: 300px;
+    padding: 15px 8px;
   }
   
   .contact-info {

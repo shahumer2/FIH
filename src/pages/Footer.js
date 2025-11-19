@@ -9,10 +9,19 @@ const Footer = () => {
   const logoUrl = `${process.env.PUBLIC_URL}/img/logo.png`;
 
   return (
-    <footer className="fih-footer bg-gray-900 text-white py-12">
-      <div className="footer-content max-w-6xl mx-auto px-4">
+<footer 
+  className="footer-top relative text-white py-10 overflow-hidden"
+  style={{
+    backgroundImage: "url('/img/footer.png')",
+    backgroundSize: '100% 100%',     // 100% width × 100% height → full stretch, no gaps
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '500px',              // Adjust this until the wave looks perfect
+  }}
+>
+      <div className="footer-content max-w-6xl mx-auto px-4 absolute inset-0 bg-cover bg-center bg-no-repeat z-0 w-full"   >
         {/* Logo */}
-        <div className="footer-logo-container text-center mb-8">
+        <div className="footer-logo-container text-center mb-2">
           <img
             src={logoUrl}
             alt="FOCUS INTEGRATED HEALTHCARE"
@@ -84,8 +93,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center mt-6 pt-4 border-t border-gray-700">
-          <p className="text-gray-400 text-xs">
+        <div className="text-center  pt-2 border-t border-gray-700">
+          <p className="text-gray-900 text-xs">
             © {new Date().getFullYear()} Focus Integrated Healthcare. All rights reserved.
           </p>
         </div>
