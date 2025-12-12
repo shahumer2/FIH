@@ -275,7 +275,7 @@ const CertificateCard = ({ cert, openModal }) => (
         <div
           className="absolute inset-0 bg-center bg-no-repeat z-0"
           style={{
-           backgroundColor:'#702727'
+           backgroundColor:'#204b29'
           }}
         />
         <div className="absolute inset-0 bg-black/40 z-0" />
@@ -397,38 +397,51 @@ const CertificateCard = ({ cert, openModal }) => (
       </section>
 
       {/* SEO Focus Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src='/img/background.jpg' alt="IFM Services" />
-            </div>
+   <section className="py-20 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      {/* Image Section */}
+      <div className="lg:h-full w-full">
+        <div className="h-full w-full overflow-hidden rounded-2xl shadow-lg">
+          <img 
+            src='/img/background.png' 
+            alt="IFM Services" 
+            className='w-full h-full object-cover'
+            style={{ minHeight: '400px' }}
+          />
+        </div>
+      </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">INTEGRATED FACILITY MANAGEMENT</h3>
-              <div className="space-y-4">
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Security & Technology</h4>
-                  <p className="text-gray-600 text-sm">Unlocking Innovative Solutions</p>
-                </div>
-                
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Cleaning</h4>
-                  <p className="text-gray-600 text-sm">Relieving the Burden of Upkeeping & Maintenance</p>
-                </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Pest Control & Fumigation</h4>
-                  <p className="text-gray-600 text-sm">Protecting Health & Facilities</p>
-                </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Landscaping & Gardening</h4>
-                  <p className="text-gray-600 text-sm">Beautifying Your Spaces</p>
-                </div>
-              </div>
+      {/* Content Section */}
+      <div className="lg:h-full">
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 md:p-8 h-full">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">INTEGRATED FACILITY MANAGEMENT</h3>
+          <div className="space-y-4">
+            <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Security & Technology</h4>
+              <p className="text-gray-600 text-sm">Unlocking Innovative Solutions</p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Cleaning</h4>
+              <p className="text-gray-600 text-sm">Relieving the Burden of Upkeeping & Maintenance</p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Pest Control & Fumigation</h4>
+              <p className="text-gray-600 text-sm">Protecting Health & Facilities</p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Landscaping & Gardening</h4>
+              <p className="text-gray-600 text-sm">Beautifying Your Spaces</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section
         className="relative py-20 bg-gray-900 text-white overflow-hidden"
@@ -483,7 +496,7 @@ const CertificateCard = ({ cert, openModal }) => (
  <section className="py-16 bg-white relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <h2 className="text-3xl font-bold bg-gradient-to-r from-green-800 to-blue-300 bg-clip-text text-transparent mb-2">
         Our Services
       </h2>
       <p className="text-xl text-slate-600 max-w-2xl mx-auto">
@@ -581,7 +594,7 @@ const CertificateCard = ({ cert, openModal }) => (
  <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-800 to-blue-300 bg-clip-text text-transparent mb-4">
         Our Licensing Certifications & ISO Awards
       </h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -9,11 +9,11 @@ function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" >
       <Navbar />
-      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#702727"}}>
+      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#204b29"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3 ">About FIH</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mt-8 mx-auto">
+            <p className="text-2xl text-blue-100 max-w-3xl mt-8 mx-auto text-white bg-clip-text text-transparent">
               Focus Integrated Healthcare (FIH)
             </p>
           </div>
@@ -25,7 +25,7 @@ function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent mb-6">Our Story</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
               We are more than a service provider but your strategic IFM
               partner, committed to creating safe, sustainable, and futureready
@@ -60,7 +60,7 @@ function About() {
         </div>
 
         <div className="bg-blue-50 rounded-2xl p-8 mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Value Proposition</h3>
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent mb-6 text-center ">Our Value Proposition</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -117,11 +117,11 @@ function About() {
           <div className="max-w-7xl mx-auto px-4">
             {/* Main Heading */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-purple-900 bg-clip-text text-transparent mb-6">
                 INTEGRATED FACILITY MANAGEMENT
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                At Focus Integrated Healthcare (FIH), we invite you to experience a new standard in Integrated
+               <span className='text-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparents'> At Focus Integrated Healthcare (FIH)</span>, we invite you to experience a new standard in Integrated
                 Facilities Management; one that is built on innovation, reliability, and care. We go beyond service
                 delivery to address our clients' unique challenges, creating value through a holistic and future-ready
                 approach. With expertise spanning multiple service divisions, we deliver seamless,
@@ -138,7 +138,7 @@ function About() {
                     <Shield className="w-8 h-8 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-green-800 to-blue-300 bg-clip-text text-transparent mb-2">
                       Security & Technology | Unlocking Innovative Solutions
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -161,7 +161,7 @@ function About() {
                     <Sparkles className="w-8 h-8 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                   <h3 className="text-2xl font-bold bg-gradient-to-r from-green-900 to-blue-400 bg-clip-text text-transparent mb-2">
                       Cleaning | Relieving the Burden of Upkeeping & Maintenance
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -183,7 +183,7 @@ function About() {
                     <Bug className="w-8 h-8 text-orange-600" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                   <h3 className="text-2xl font-bold bg-gradient-to-r from-green-900 to-blue-400 bg-clip-text text-transparent mb-2">
                       Pest Control & Fumigation | Protecting Health & Facilities
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -205,7 +205,7 @@ function About() {
                     <Trees className="w-8 h-8 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-green-800 to-blue-200 bg-clip-text text-transparent mb-2">
                       Landscaping & Gardening | Beautifying Your Spaces
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -223,7 +223,7 @@ function About() {
 
             {/* Bottom CTA */}
             <div className="text-center mt-12">
-              <div className="  rounded-2xl p-8 text-white" style={{backgroundColor:"#702727"}}>
+              <div className="  rounded-2xl p-8 text-white" style={{backgroundColor:"#204b29"}}>
                 <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Facilities?</h3>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Partner with us to experience comprehensive facility management solutions that drive efficiency, safety, and excellence.

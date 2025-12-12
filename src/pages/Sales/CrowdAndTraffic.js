@@ -175,74 +175,118 @@ const CrowdAndTraffic = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20  text-white" style={{backgroundColor:"#702727"}}>
+      <section className="pt-20 pb-5 text-white" style={{ backgroundColor: "#204b29" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Security & Technology
-            </h1>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              Unlocking Innovative Solutions
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left Side - Batch Image */}
+            <div className="relative flex justify-center lg:justify-start">
+              <div className="relative">
+                {/* Clean batch container without green background */}
+                <div className="relative">
+                  {/* Subtle glow effect */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-lg"></div>
 
-            </p>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              Enabling cities of the future with comprehensive security and traffic solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-blue-200">
-                <Shield className="w-5 h-5 mr-2" />
-                <span>Event & Crowd Management
-                </span>
+                  {/* Batch image container */}
+                  <div className="relative p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    {/* Floating decorative elements */}
+                    <div className="absolute -top-3 -right-3 w-16 h-16 bg-emerald-500/10 rounded-full blur-md"></div>
+                    <div className="absolute -bottom-3 -left-3 w-14 h-14 bg-teal-500/10 rounded-full blur-md"></div>
+
+                    {/* Batch image */}
+                    <div className="relative z-10 flex items-center justify-center">
+                      <div className="relative">
+                        <img
+                          src='/img/batch.png'
+                          alt="Security Batch"
+                          className="w-64 h-64 lg:w-72 lg:h-72 object-contain drop-shadow-2xl"
+                        />
+                        {/* Subtle shine effect */}
+                        <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-white/5 rounded-full blur-md"></div>
+                      </div>
+                    </div>
+
+                    {/* Caption */}
+                    <div className="text-center mt-6">
+                      <h3 className="text-2xl font-bold text-emerald-100 mb-1">Trusted Security Partner</h3>
+
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-blue-200">
-                <Users className="w-5 h-5 mr-2" />
-                <span>Emergency Response Support
-                </span>
-              </div>
-              <div className="flex items-center text-blue-200">
-                <Car className="w-5 h-5 mr-2" />
-                <span>Escort & Convoy Services
-                </span>
-              </div>
-
-              <div className="flex items-center text-blue-200">
-                <Shield className="w-5 h-5 mr-2" />
-                <span>Controlled Route Access
-
-                </span>
-              </div>
-
-
-
             </div>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-
-
-              <div className="flex items-center text-blue-200">
-                <Users className="w-5 h-5 mr-2" />
-                <span>Roving Security Responsive Support
-
+            {/* Right Side - Content */}
+            <div className="lg:pl-2 mt-8">
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-4 leading-tight">
+                Security &
+                <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+                  Technology
                 </span>
+              </h1>
+
+              {/* Subtitle */}
+              <div className="mb-8">
+                <p className="text-2xl text-emerald-200 mb-4 font-semibold">
+                  Unlocking Innovative Solutions
+                </p>
+                <p className="text-lg text-emerald-100/90 leading-relaxed max-w-2xl">
+                  Enabling cities of the future with comprehensive security and traffic solutions.
+                  Our integrated approach combines cutting-edge technology with proven methodologies
+                  to deliver unmatched protection and efficiency.
+                </p>
               </div>
-              <div className="flex items-center text-blue-200">
-                <Car className="w-5 h-5 mr-2" />
-                <span>Traffic & Safety Monitoring
 
-                </span>
-              </div>
-              <div className="flex items-center text-blue-200">
-                <Car className="w-5 h-5 mr-2" />
-                <span>Centralised 24-hr Facility Ops Centre
+              {/* Features Grid - Updated to match original spacing */}
+              <div className="space-y-6 mb-5">
+                {/* First row */}
+                <div className="flex flex-col sm:flex-row flex-wrap gap-2">
+                  {[
+                    { icon: <Shield className="w-5 h-5" />, text: "Event & Crowd Management" },
+                    { icon: <Users className="w-5 h-5" />, text: "Emergency Response Support" },
+                    { icon: <Car className="w-5 h-5" />, text: "Escort & Convoy Services" },
+                    { icon: <Shield className="w-5 h-5" />, text: "Controlled Route Access" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex-1 min-w-[200px]">
+                      <div className="group flex items-center gap-3 p-2 rounded-xl hover:bg-emerald-900/30 transition-all duration-300">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-900/40 flex items-center justify-center group-hover:bg-emerald-800/50 transition-colors">
+                          <div className="text-emerald-300 group-hover:text-emerald-200">
+                            {item.icon}
+                          </div>
+                        </div>
+                        <span className="text-emerald-100 group-hover:text-white transition-colors">
+                          {item.text}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-
-                </span>
+                {/* Second row */}
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+                  {[
+                    { icon: <Users className="w-5 h-5" />, text: "Roving Security Responsive Support" },
+                    { icon: <Car className="w-5 h-5" />, text: "Traffic & Safety Monitoring" },
+                    { icon: <Car className="w-5 h-5" />, text: "Centralised 24-hr Facility Ops Centre" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex-1 min-w-[200px]">
+                      <div className="group flex items-center gap-3 p-4 rounded-xl hover:bg-emerald-900/30 transition-all duration-300">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-900/40 flex items-center justify-center group-hover:bg-emerald-800/50 transition-colors">
+                          <div className="text-emerald-300 group-hover:text-emerald-200">
+                            {item.icon}
+                          </div>
+                        </div>
+                        <span className="text-emerald-100 group-hover:text-white transition-colors">
+                          {item.text}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </section>
 
       {/* About Section */}
@@ -285,60 +329,60 @@ const CrowdAndTraffic = () => {
 
 
 
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20  text-white" style={{ backgroundColor: "#204b29" }}>
 
 
         <div className="max-w-7xl mx-auto px-4">
 
 
-         <div className="relative py-16 mb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl overflow-hidden">
-  {/* Background Pattern */}
-  <div className="absolute inset-0 opacity-10">
-    <div className="absolute inset-0" style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-    }}></div>
-  </div>
+          <div className="relative py-16 mb-16 bg-gradient-to-br from-green-500 via-green-800 to-green-400 rounded-3xl overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+              }}></div>
+            </div>
 
-  {/* Animated Background Elements */}
-  <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-  <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+            {/* Animated Background Elements */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
 
-  <div className="max-w-4xl mx-auto px-6 relative z-10">
-    {/* Enhanced Heading */}
-    <div className="text-center mb-12">
-      <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl px-8 py-4 mb-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-          CROWD CONTROL | MAJOR EVENTS
-        </h2>
-      </div>
-    </div>
+            <div className="max-w-4xl mx-auto px-6 relative z-10">
+              {/* Enhanced Heading */}
+              <div className="text-center mb-12">
+                <div className="inline-block bg-gradient-to-r from-green-400 to-green-800 rounded-2xl shadow-lg px-8 py-4 mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                    CROWD CONTROL | MAJOR EVENTS
+                  </h2>
+                </div>
+              </div>
 
-    {/* Enhanced Image */}
-    <div className="relative mb-8 group">
-      <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      <img 
-        src='/img/security/sec1.png' 
-        alt='Crowd Control Major Events'
-        className="relative w-full h-64 object-cover rounded-xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
-      />
-      <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-        🛡️ Professional Event Security
-      </div>
-    </div>
+              {/* Enhanced Image */}
+              <div className="relative mb-8 group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <img
+                  src='/img/security/sec1.png'
+                  alt='Crowd Control Major Events'
+                  className="relative w-full h-64 object-cover rounded-xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
+                />
+                <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                  🛡️ Professional Event Security
+                </div>
+              </div>
 
-    {/* Enhanced Content */}
-    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
-      <div className="flex items-start mb-4">
-        <div className="bg-blue-500 rounded-lg p-3 mr-4">
-          <Users className="w-6 h-6 text-white" />
-        </div>
-        <p className="text-lg text-blue-100 leading-relaxed flex-1">
-          As an event host, you want to ensure that the security team you hire will have the skill set needed to handle safety issues, as the risk of injuries or altercations due to large crowd moving en-masse at events are extremely high. Whether the events is a live music, sports, exhibitions & conventions or industry show it should be coordinated to maximise security and efficiencies inside and outside the venue with the best practice protocols in place to avoid any uncertainty of disruption. As event security entails far more than just dotting the venue with security personnel. The process is quite complex and requires extensive coordination and communication
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+              {/* Enhanced Content */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+                <div className="flex items-start mb-4">
+                  <div className="rounded-lg p-3 mr-4" style={{ backgroundColor: "#204b29" }}>
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-lg text-blue-100 leading-relaxed flex-1">
+                    As an event host, you want to ensure that the security team you hire will have the skill set needed to handle safety issues, as the risk of injuries or altercations due to large crowd moving en-masse at events are extremely high. Whether the events is a live music, sports, exhibitions & conventions or industry show it should be coordinated to maximise security and efficiencies inside and outside the venue with the best practice protocols in place to avoid any uncertainty of disruption. As event security entails far more than just dotting the venue with security personnel. The process is quite complex and requires extensive coordination and communication
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
@@ -348,54 +392,54 @@ const CrowdAndTraffic = () => {
 
           <div className="max-w-7xl mx-auto">
 
-            
-          <div className="flex flex-col lg:flex-row gap-8 items-center">
-  {/* Image Section - Enhanced */}
-  <div className="w-full lg:w-1/2">
-    <div className="relative group">
-      <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      <img
-        src='/img/security/sec2.png'
-        alt="Event Security Solutions"
-        className="relative w-full h-full object-cover rounded-xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
-      />
-      <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-        🎯 Custom Solutions
-      </div>
-    </div>
-  </div>
 
-  {/* Content Section - Enhanced */}
-  <div className="w-full lg:w-1/2">
-    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
-      {/* First Paragraph with Icon */}
-      <div className="flex items-start mb-6">
-        <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg p-3 mr-4 flex-shrink-0">
-          <ShieldCheck className="w-6 h-6 text-white" />
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-white mb-2">Bespoke Security Solutions</h3>
-          <p className="text-blue-100 leading-relaxed">
-            At FIH, with our years of experiences in evaluating event security and safety concern, we have help deliver bespoke solutions for event's organisers and reducing their daunting challenge of finding the right balance of maximising event success and safety of attendees.
-          </p>
-        </div>
-      </div>
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
+              {/* Image Section - Enhanced */}
+              <div className="w-full lg:w-1/2">
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-green-900 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                  <img
+                    src='/img/security/sec2.png'
+                    alt="Event Security Solutions"
+                    className="relative w-full h-full object-cover rounded-xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                    🎯 Custom Solutions
+                  </div>
+                </div>
+              </div>
 
-      {/* Second Paragraph with Icon */}
-      <div className="flex items-start">
-        <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg p-3 mr-4 flex-shrink-0">
-          <Award className="w-6 h-6 text-white" />
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-white mb-2">Positive Public Experience</h3>
-          <p className="text-blue-100 leading-relaxed">
-            Notably, by implementing the right security practices and crowd management will ensure that everything goes as planned, as well as provide a positive public's experience to help you build credibility for future events.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              {/* Content Section - Enhanced */}
+              <div className="w-full lg:w-1/2">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
+                  {/* First Paragraph with Icon */}
+                  <div className="flex items-start mb-6">
+                    <div className="rounded-lg p-3 mr-4 flex-shrink-0" style={{ backgroundColor: "#204b29" }}>
+                      <ShieldCheck className="w-6 h-6 text-white" />
+                    </div>
+                    <div >
+                      <h3 className="text-xl font-bold text-white mb-2">Bespoke Security Solutions</h3>
+                      <p className="text-blue-100 leading-relaxed">
+                        At FIH, with our years of experiences in evaluating event security and safety concern, we have help deliver bespoke solutions for event's organisers and reducing their daunting challenge of finding the right balance of maximising event success and safety of attendees.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Second Paragraph with Icon */}
+                  <div className="flex items-start">
+                    <div className=" rounded-lg p-3 mr-4 flex-shrink-0" style={{ backgroundColor: "#204b29" }}>
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">Positive Public Experience</h3>
+                      <p className="text-blue-100 leading-relaxed">
+                        Notably, by implementing the right security practices and crowd management will ensure that everything goes as planned, as well as provide a positive public's experience to help you build credibility for future events.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 
@@ -405,7 +449,7 @@ const CrowdAndTraffic = () => {
 
             <div className="relative py-16 mb-16 mt-4 overflow-hidden">
               {/* Background with gradient and pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-green-900 to-green-600">
                 <div className="absolute inset-0 opacity-20"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -414,7 +458,7 @@ const CrowdAndTraffic = () => {
               </div>
 
               {/* Animated background elements */}
-              <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+              <div className="absolute top-0 left-0 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
               <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
               <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
 
@@ -428,7 +472,7 @@ const CrowdAndTraffic = () => {
                     <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-purple-400"></div>
                     <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-purple-400"></div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent py-4 px-8">
+                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-100 via-green-200 to-green-300 bg-clip-text text-transparent py-4 px-8">
                       TRAFFIC OUTRIDERS | ENFORCEMENT
                     </h2>
 
@@ -444,7 +488,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-cyan-500 rounded-xl flex items-center justify-center">
                             <Shield className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -460,7 +504,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-pink-200 to-green-900 rounded-xl flex items-center justify-center">
                             <Users className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -476,7 +520,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-900 to-emerald-500 rounded-xl flex items-center justify-center">
                             <Target className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -505,7 +549,7 @@ const CrowdAndTraffic = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
 
                       {/* Floating badge */}
-                      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-green-900 to-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
                         Professional Security
                       </div>
                     </div>
@@ -536,7 +580,7 @@ const CrowdAndTraffic = () => {
 
             <div className="relative py-16 mb-16 overflow-hidden">
               {/* Background with gradient and pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-900 via-orange-900 to-gray-900">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-900 via-green-700 to-gray-900">
                 <div className="absolute inset-0 opacity-20"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -559,7 +603,7 @@ const CrowdAndTraffic = () => {
                     <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-orange-400"></div>
                     <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-orange-400"></div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent py-4 px-8">
+                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 via-green-400 to-red-100 bg-clip-text text-transparent py-4 px-8">
                       TRAFFIC OUTRIDERS | ESCORT
                     </h2>
 
@@ -586,7 +630,7 @@ const CrowdAndTraffic = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
 
                       {/* Floating badge */}
-                      <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-green-900 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
                         Professional Escort
                       </div>
                     </div>
@@ -604,7 +648,7 @@ const CrowdAndTraffic = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
 
                       {/* Floating badge */}
-                      <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-green-900 to-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm backdrop-blur-sm">
                         Escort
                       </div>
                     </div>
@@ -631,7 +675,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-300 to-green-900 rounded-xl flex items-center justify-center">
                             <Car className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -647,7 +691,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-200 to-green-900 rounded-xl flex items-center justify-center">
                             <Shield className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -663,7 +707,7 @@ const CrowdAndTraffic = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-900 rounded-xl flex items-center justify-center">
                             <Users className="w-6 h-6 text-white" />
                           </div>
                         </div>
@@ -809,7 +853,9 @@ const CrowdAndTraffic = () => {
                 {/* School Zone Improvements Section */}
                 <div className="mb-20">
                   <div className="text-center mb-12">
-                    <h3 className="text-3xl font-bold text-white mb-4">School Zone Safety Improvements</h3>
+                    <h3 className="text-3xl font-bold shadow-sm bg-gradient-to-r from-green-200 to-green-500 bg-clip-text text-transparent mb-4">
+                      School Zone Safety Improvements
+                    </h3>
                     <div className="relative rounded-2xl overflow-hidden group max-w-4xl mx-auto mb-8">
                       <img
                         src='/img/security/sec8.png'
@@ -847,7 +893,7 @@ const CrowdAndTraffic = () => {
                 {/* 24-Hour Facility Response Section */}
                 <div className="mb-20">
                   <div className="text-center mb-12">
-                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 shadow-sm bg-clip-text text-transparent mb-6">
                       FACILITY RESPONSE | 24 Hours
                     </h3>
                     <div className="relative rounded-2xl overflow-hidden group max-w-4xl mx-auto mb-8">
@@ -883,7 +929,7 @@ const CrowdAndTraffic = () => {
                 {/* Traffic Marshals Construction Section */}
                 <div className="mb-16">
                   <div className="text-center mb-12">
-                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-6">
+                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-600 to-cyan-400 bg-clip-text text-transparent mb-6">
                       TRAFFIC MARSHALS | CONSTRUCTION
                     </h3>
                   </div>
@@ -1002,7 +1048,7 @@ const CrowdAndTraffic = () => {
 
 
       {/* Emergency Response Team */}
-      <section className="py-20 bg-gradient-to-r from-red-400 to-orange-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-800 to-orange-300 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center">
             <div>
@@ -1032,7 +1078,7 @@ const CrowdAndTraffic = () => {
                 </li>
               </ul>
             </div>
-         
+
           </div>
         </div>
       </section>
@@ -1097,7 +1143,7 @@ const CrowdAndTraffic = () => {
 
 
         <div className="contact-info flex justify-center  mx-auto mt-8 flex-wrap">
-          
+
 
           <div className="contact-item">
             <img

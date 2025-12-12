@@ -33,28 +33,32 @@ function Navbar() {
   return (
     <>
       {/* Top Emergency Bar */}
-    
+
 
       {/* Main Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' 
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg py-2'
           : 'bg-transparent py-6'
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img 
-                src="/img/logo.png" 
-                alt="FIH Logo" 
-                className={`h-10 w-auto transition-all duration-300 ${
-                  isScrolled ? '' : 'h-12'
-                }`}
+              {/* Scrolled logo */}
+              <img
+                src="/img/logoGreen.png"
+                alt="FIH Logo"
+                className={`h-16 w-auto transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 absolute'
+                  }`}
               />
-              <span className={`text-3xl transition-all duration-300 ${
-                isScrolled ? 'text-gray-800' : 'text-white'
-              }`}>FIH</span>  
+
+              {/* Default logo */}
+              <img
+                src="/img/logo.png"
+                alt="FIH Logo"
+                className={`h-16 w-auto transition-all duration-300 ${isScrolled ? 'opacity-0 absolute' : 'opacity-100'
+                  }`}
+              />
             </Link>
 
             {/* Desktop Menu */}
@@ -62,25 +66,23 @@ function Navbar() {
               {navItems.map((item) => (
                 <div key={item.path} className="relative">
                   {item.dropdown ? (
-                    <div 
+                    <div
                       className="relative"
                       onMouseEnter={() => setIsSalesDropdownOpen(true)}
                       onMouseLeave={() => setIsSalesDropdownOpen(false)}
                     >
                       <button
-                        className={`font-medium transition-all duration-300 hover:text-blue-500 ${
-                          isScrolled 
-                            ? 'text-gray-700 hover:text-blue-600' 
+                        className={`font-medium transition-all duration-300 hover:text-blue-500 ${isScrolled
+                            ? 'text-gray-700 hover:text-blue-600'
                             : 'text-white hover:text-blue-200'
-                        } ${
-                          location.pathname.startsWith(item.path) 
-                            ? (isScrolled ? 'text-blue-600' : 'text-blue-300') 
+                          } ${location.pathname.startsWith(item.path)
+                            ? (isScrolled ? 'text-blue-600' : 'text-blue-300')
                             : ''
-                        }`}
+                          }`}
                       >
                         {item.label} ▼
                       </button>
-                      
+
                       {isSalesDropdownOpen && (
                         <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
                           {item.dropdown.map((dropdownItem) => (
@@ -99,15 +101,13 @@ function Navbar() {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`font-medium transition-all duration-300 hover:text-blue-500 ${
-                        isScrolled 
-                          ? 'text-gray-700 hover:text-blue-600' 
+                      className={`font-medium transition-all duration-300 hover:text-blue-500 ${isScrolled
+                          ? 'text-gray-700 hover:text-blue-600'
                           : 'text-white hover:text-blue-200'
-                      } ${
-                        location.pathname === item.path 
-                          ? (isScrolled ? 'text-blue-600' : 'text-blue-300') 
+                        } ${location.pathname === item.path
+                          ? (isScrolled ? 'text-blue-600' : 'text-blue-300')
                           : ''
-                      }`}
+                        }`}
                     >
                       {item.label}
                     </Link>
@@ -118,13 +118,12 @@ function Navbar() {
 
             {/* Emergency Contact - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a 
+              <a
                 href="tel:+6597407333"
-                className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                  isScrolled 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'bg-white text-blue-600 hover:bg-blue-50'
-                }`}
+                className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${isScrolled
+                    ? 'bg-green-600 text-white hover:bg-blue-700'
+                    : 'bg-white text-green-600 hover:bg-blue-50'
+                  }`}
               >
                 Call: +65 9740-7333
               </a>
@@ -133,9 +132,8 @@ function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 rounded-md transition-colors ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              className={`md:hidden p-2 rounded-md transition-colors ${isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
@@ -171,13 +169,11 @@ function Navbar() {
                       <Link
                         to={item.path}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`font-medium transition-colors ${
-                          isScrolled ? 'text-gray-700' : 'text-white'
-                        } ${
-                          location.pathname === item.path 
-                            ? (isScrolled ? 'text-blue-600' : 'text-blue-300') 
+                        className={`font-medium transition-colors ${isScrolled ? 'text-gray-700' : 'text-white'
+                          } ${location.pathname === item.path
+                            ? (isScrolled ? 'text-blue-600' : 'text-blue-300')
                             : ''
-                        }`}
+                          }`}
                       >
                         {item.label}
                       </Link>

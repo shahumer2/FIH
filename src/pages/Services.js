@@ -112,7 +112,7 @@ function Services() {
       <Navbar />
 
       {/* Header Section */}
-      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#702727"}}>
+      <section className="pt-32 pb-40  text-white" style={{backgroundColor:"#204b29"}}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
@@ -124,7 +124,7 @@ function Services() {
       </section>
 
       {/* Integrated Approach Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25px 25px, rgba(255,255,255,0.3) 2%, transparent 0%), radial-gradient(circle at 75px 75px, rgba(255,255,255,0.2) 2%, transparent 0%)`,
@@ -278,13 +278,13 @@ function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Need Our Services?</h2>
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-300 bg-clip-text text-transparent mb-2">Need Our Services?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact us to discuss your security, cleaning, pest control, and landscaping requirements
           </p>
           <Link
             to="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block"
+            className="bg-green-800 hover:bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block"
           >
             Get in Touch
           </Link>
