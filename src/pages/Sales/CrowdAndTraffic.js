@@ -1002,9 +1002,9 @@ const CrowdAndTraffic = () => {
 
 
       {/* Emergency Response Team */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-red-400 to-orange-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center">
             <div>
               <div className="flex items-center mb-4">
                 <AlertTriangle className="w-8 h-8 mr-3" />
@@ -1032,20 +1032,7 @@ const CrowdAndTraffic = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-              <blockquote className="text-lg text-black italic mb-6">
-                "Incident Response needs people, because successful incident response requires thinking."
-              </blockquote>
-              <div className="flex items-center">
-                <div className="bg-white bg-opacity-20 rounded-full p-2 mr-4">
-                  <Shield className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-semibold text-black">Chan Meng Chuen</p>
-                  <p className=" text-sm text-black">Director, Security ADVANCER IFM</p>
-                </div>
-              </div>
-            </div>
+         
           </div>
         </div>
       </section>

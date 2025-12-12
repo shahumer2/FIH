@@ -707,9 +707,9 @@ const CertificateCard = ({ cert, openModal }) => (
       {/* Footer Section */}
       <section style={{
         background: 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)',
-        padding: '1rem 0',
+        padding: '2px 0',
         color: 'white',
-        boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.5), 0 -2px 10px rgba(165, 97, 97, 0.3)',
+        boxShadow: '0 -4px 10px rgba(0, 0, 0, 0.5), 0 -2px 10px rgba(165, 97, 97, 0.3)',
         borderTop: '3px solid #a36161',
         position: 'relative'
       }}>

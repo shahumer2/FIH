@@ -12,7 +12,7 @@ const Footer = () => {
 <footer 
   className="footer-top relative text-white py-10 overflow-hidden"
   style={{
-    backgroundImage: "url('/img/footer.png')",
+    backgroundImage: "url('/img/poster.png')",
     backgroundSize: '100% 100%',     // 100% width × 100% height → full stretch, no gaps
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
