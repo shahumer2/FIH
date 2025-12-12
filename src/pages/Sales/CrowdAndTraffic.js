@@ -1131,13 +1131,13 @@ const CrowdAndTraffic = () => {
 
         <div className="footer-logo-container">
           <img
-            src="/img/logo.png"
+            src="/img/logoGreen.png"
             alt="FIH Logo"
-            className={`h-10 w-auto transition-all duration-300 
+            className={`h-30 w-auto transition-all duration-300 
                 }`}
           />
-          <span className={`text-3xl transition-all duration-300 
-                }`}>SECURITY</span>
+          {/* <span className={`text-3xl transition-all duration-300 
+                }`}>SECURITY</span> */}
         </div>
 
 
@@ -1159,7 +1159,7 @@ const CrowdAndTraffic = () => {
             <span className="contact-detail text-white mb-6" ><span class="log "><FaPhoneAlt /></span>+65 9741-7333  <br />+65 9742-7333</span>
 
             <span className="contact-email text-white mb-3" ><span class="log "><CiGlobe /></span>security@fih.com.sg</span>
-            <span className="contact-email text-white" > <span class="log "><CiGlobe /> </span>  9 Eunos Ave 8A,<br />
+            <span className="contact-email text-white " > <span class="log "><CiGlobe /> </span>  9 Eunos Ave 8A,<br />
               #02-00 <br />
               Singapore 409461</span>
           </div>
