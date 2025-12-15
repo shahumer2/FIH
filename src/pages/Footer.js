@@ -51,7 +51,7 @@ const Footer = () => {
               />
               <div className="bg-white p-3 lg:p-4 rounded-lg shadow-lg">
                 <img
-                  src='/img/qr2.jpg'
+                  src='/img/qr2.png'
                   alt="QR Code"
                   className="w-20 h-20 lg:w-24 lg:h-24 object-contain"
                 />
@@ -95,7 +95,7 @@ const Footer = () => {
                 className="h-10 object-contain mt-3"
               />
                 <img
-                  src='/img/qr2.jpg'
+                  src='/img/qr2.png'
                   alt="QR Code"
                   className="w-24 h-24 object-contain"
                 />

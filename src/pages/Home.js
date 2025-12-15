@@ -1,13 +1,94 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { Search, Shield, Users, FileText, Mail, Phone, MapPin, ArrowRight, Download, ChevronLeft, ChevronRight, Eye, X } from 'lucide-react';
 import Footer from './Footer';
 import { FaWhatsapp } from 'react-icons/fa';
-
+import ReactPlayer from 'react-player';
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const [currentVideoSlide, setCurrentVideoSlide] = useState(0);
+const videoRefs = useRef([]);
+
+// Initialize video refs
+useEffect(() => {
+  videoRefs.current = [React.createRef(), React.createRef()];
+}, []);
+
+// Handle slide change
+const handleVideoNext = () => {
+  // Pause current video
+  if (videoRefs.current[currentVideoSlide]?.current) {
+    videoRefs.current[currentVideoSlide].current.pause();
+  }
+  
+  const nextSlide = currentVideoSlide === 1 ? 0 : currentVideoSlide + 1;
+  setCurrentVideoSlide(nextSlide);
+  
+  // Play next video after slide transition
+  setTimeout(() => {
+    if (videoRefs.current[nextSlide]?.current) {
+      videoRefs.current[nextSlide].current.play().catch(e => {
+        console.log("Auto-play prevented, user interaction required");
+      });
+    }
+  }, 300);
+};
+
+const handleVideoPrev = () => {
+  // Pause current video
+  if (videoRefs.current[currentVideoSlide]?.current) {
+    videoRefs.current[currentVideoSlide].current.pause();
+  }
+  
+  const prevSlide = currentVideoSlide === 0 ? 1 : currentVideoSlide - 1;
+  setCurrentVideoSlide(prevSlide);
+  
+  // Play previous video after slide transition
+  setTimeout(() => {
+    if (videoRefs.current[prevSlide]?.current) {
+      videoRefs.current[prevSlide].current.play().catch(e => {
+        console.log("Auto-play prevented, user interaction required");
+      });
+    }
+  }, 300);
+};
+
+const goToVideoSlide = (index) => {
+  // Don't do anything if clicking current slide
+  if (index === currentVideoSlide) return;
+  
+  // Pause current video
+  if (videoRefs.current[currentVideoSlide]?.current) {
+    videoRefs.current[currentVideoSlide].current.pause();
+  }
+  
+  setCurrentVideoSlide(index);
+  
+  // Play new slide video
+  setTimeout(() => {
+    if (videoRefs.current[index]?.current) {
+      videoRefs.current[index].current.play().catch(e => {
+        console.log("Auto-play prevented");
+      });
+    }
+  }, 300);
+};
+
+// Auto-play first video on mount (only once)
+useEffect(() => {
+  const timer = setTimeout(() => {
+    if (videoRefs.current[0]?.current) {
+      videoRefs.current[0].current.play().catch(e => {
+        console.log("Initial auto-play prevented - user needs to interact first");
+      });
+    }
+  }, 1000);
+  
+  return () => clearTimeout(timer);
+}, []);
+
 
   const [servicesCurrentSlide, setServicesCurrentSlide] = useState(0);
   const [isServicesAutoPlaying, setIsServicesAutoPlaying] = useState(true);
@@ -586,6 +667,129 @@ const CertificateCard = ({ cert, openModal }) => (
           ></button>
         ))}
       </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section className="py-16 bg-gradient-to-br from-gray-900 to-slate-800">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Our Videos</h2>
+      <p className="text-gray-300">Watch our facilities management solutions in action</p>
+    </div>
+
+    {/* Simple HTML5 Video Carousel */}
+    <div className="relative overflow-hidden rounded-2xl bg-black/30">
+      {/* Video Slides */}
+      <div 
+        className="flex transition-transform duration-300"
+        style={{ transform: `translateX(-${currentVideoSlide * 100}%)` }}
+      >
+        {/* Video Slide 1 */}
+        <div className="w-full flex-shrink-0 p-4">
+          <div className="relative">
+            {/* Playing Indicator */}
+            <div className={`absolute top-4 left-4 z-20 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center transition-opacity duration-300 ${
+              currentVideoSlide === 0 ? 'opacity-100' : 'opacity-0'
+            }`}>
+              <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+              Now Playing
+            </div>
+            
+            <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
+              <video
+                ref={videoRefs.current[0]}
+                controls
+                className="w-full h-auto max-h-[500px]"
+                onPlay={() => setCurrentVideoSlide(0)}
+                onPause={() => {}}
+              >
+                <source src="/videos/fih1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-6 bg-gradient-to-r from-gray-900 to-black">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Company Overview</h3>
+                <p className="text-gray-300">A comprehensive look at FIH's integrated facilities management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Video Slide 2 */}
+        <div className="w-full flex-shrink-0 p-4">
+          <div className="relative">
+            {/* Playing Indicator */}
+            <div className={`absolute top-4 left-4 z-20 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center transition-opacity duration-300 ${
+              currentVideoSlide === 1 ? 'opacity-100' : 'opacity-0'
+            }`}>
+              <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+              Now Playing
+            </div>
+            
+            <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
+              <video
+                ref={videoRefs.current[1]}
+                controls
+                className="w-full h-auto max-h-[500px]"
+                onPlay={() => setCurrentVideoSlide(1)}
+                onPause={() => {}}
+              >
+                <source src="/videos/fih2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-6 bg-gradient-to-r from-gray-900 to-black">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Our Process in Action</h3>
+                <p className="text-gray-300">See how our teams deliver security, cleaning, and pest control services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Simple Navigation Controls */}
+      <div className="flex justify-center items-center mt-6 space-x-4">
+        <button
+          onClick={handleVideoPrev}
+          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors flex items-center"
+        >
+          <ChevronLeft className="w-5 h-5 mr-1" />
+          Previous
+        </button>
+        
+        <div className="flex space-x-2">
+          <button
+            onClick={() => goToVideoSlide(0)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentVideoSlide === 0 ? 'bg-white scale-125' : 'bg-white/30'
+            }`}
+            aria-label="Go to video 1"
+          />
+          <button
+            onClick={() => goToVideoSlide(1)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentVideoSlide === 1 ? 'bg-white scale-125' : 'bg-white/30'
+            }`}
+            aria-label="Go to video 2"
+          />
+        </div>
+        
+        <button
+          onClick={handleVideoNext}
+          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors flex items-center"
+        >
+          Next
+          <ChevronRight className="w-5 h-5 ml-1" />
+        </button>
+      </div>
+    </div>
+
+    {/* Auto-play Notice */}
+    <div className="mt-6 p-4 bg-blue-900/20 rounded-lg">
+      <p className="text-blue-300 text-sm text-center">
+        <span className="font-semibold">Note:</span> First video auto-plays. Browser may require one click to enable sound.
+      </p>
     </div>
   </div>
 </section>

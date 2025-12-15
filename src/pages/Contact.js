@@ -92,7 +92,7 @@ function Contact() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                  <Phone className="w-6 h-6 text-green-600 mr-4 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone Number</h3>
                     <div className="text-gray-700 space-y-1 mt-1">
@@ -101,7 +101,7 @@ function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                  <Mail className="w-6 h-6 text-green-600 mr-4 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <div className="text-gray-700 space-y-1 mt-1">
@@ -112,7 +112,7 @@ function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                  <MapPin className="w-6 h-6 text-green-600 mr-4 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-700 mt-1">
@@ -124,7 +124,7 @@ function Contact() {
               </div>
               <div className="bg-blue-50/80 rounded-lg p-6 border border-blue-100">
                 <h3 className="font-semibold text-gray-900 mb-3">Website</h3>
-                <a href="https://www.fih.com.sg" className="text-blue-600 hover:text-blue-700 font-medium">
+                <a href="https://www.fih.com.sg" className="text-green-600 hover:text-green-00 font-medium">
                   www.fih.com.sg
                 </a>
               </div>
@@ -228,7 +228,7 @@ function Contact() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-6 rounded-lg font-semibold transition duration-300"
+                  className="w-full bg-green-600 hover:bg-green-700 disabled:bg-blue-400 text-white py-3 px-6 rounded-lg font-semibold transition duration-300"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
