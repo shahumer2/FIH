@@ -96,7 +96,7 @@ function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone Number</h3>
                     <div className="text-gray-700 space-y-1 mt-1">
-                      <div>(65) 9740-7333</div>
+                      <div>(65) 9795-7333</div>
                     </div>
                   </div>
                 </div>

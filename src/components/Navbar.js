@@ -125,7 +125,7 @@ function Navbar() {
                     : 'bg-white text-green-600 hover:bg-blue-50'
                   }`}
               >
-                Call: +65 9740-7333
+                Call: +65 9795-7333
               </a>
             </div>
 

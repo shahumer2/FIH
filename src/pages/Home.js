@@ -387,7 +387,7 @@ const CertificateCard = ({ cert, openModal }) => (
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center"
             >
               <FaWhatsapp className="w-5 h-7 mr-2" />
-              (65) 9740-7333
+              (65) 9795-7333
             </a>
           </div>
         </div>

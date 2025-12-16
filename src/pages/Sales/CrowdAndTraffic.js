@@ -1156,7 +1156,7 @@ const CrowdAndTraffic = () => {
 
           <div className="contact-item">
             <span className="contact-label">Traffic & Security</span>
-            <span className="contact-detail text-white mb-6" ><span class="log "><FaPhoneAlt /></span>+65 9741-7333  <br />+65 9742-7333</span>
+            <span className="contact-detail text-white mb-6" ><span class="log "><FaPhoneAlt /></span>+65 9795-7333  <br /></span>
 
             <span className="contact-email text-white mb-3" ><span class="log "><CiGlobe /></span>security@fih.com.sg</span>
             <span className="contact-email text-white " > <span class="log "><CiGlobe /> </span>  9 Eunos Ave 8A,<br />
